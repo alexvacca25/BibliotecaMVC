@@ -1,0 +1,17 @@
+ Requisitos:
+ • Modelo:
+ ▪ Diseña un modelo que represente los libros, revistas y usuarios. Cada libro y revista debe tener información
+ como 
+ 
+ Materiales 
+ tipo > libro o revista
+ título, 
+ autor, 
+ año de publicación, etc. 
+ 
+ Los usuarios deben tener detalles como 
+
+ usuario
+ nombre, 
+ ID y 
+ lista de  materiales prestados.

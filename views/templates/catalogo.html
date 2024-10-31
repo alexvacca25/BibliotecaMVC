@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Adicionar Articulos</h3>
+    <form action="/add_material" method="post">
+        <input type="text" name="titulo" placeholder="Ingrese Titulo" required>
+        <input type="text" name="autor" placeholder="Ingrese Autor" required>
+        <input type="text" name="tipo" placeholder="Tipo(Libro/Revista)" required>
+        <input type="number" name="anno_publica" placeholder="Año de Publicacion" required>
+        <button type="submit">Guardar</button>
+
+    </form>
+
+    <h3>Lista de Inventario</h3>
+    <ul>
+        {% for item in materiales %}
+
+        <li> {{ item.tipo }}: {{item.titulo}} -{{item.autor}} -{{item.anno_publica}} </li>
+
+        {% endfor %}
+
+    </ul>
+
+</body>
+
+</html>
