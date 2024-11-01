@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getion de Reservas</title>
+</head>
+
+<body>
+
+    <h2>Gestionar las Reservas</h2>
+
+    <form action="/prestamo_material" method="post">
+
+        <label for="usuario_id">Usuario:</label>
+        <select name="usuario_id" id="usuario_id" required>
+            {% for user in usuarios %}
+            <option value="{{user.id}}">{{user.nombre}}</option>
+            {% endfor %}
+
+        </select>
+
+        <label for="material_id">Material:</label>
+        <select name="material_id" id="material_id" required>
+            {% for item in materiales %}
+            <option value="{{item.id}}">{{item.titulo}} - {{item.autor}}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Realizar Prstamos</button>
+
+
+
+
+    </form>
+
+</body>
+
+</html>

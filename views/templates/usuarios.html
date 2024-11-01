@@ -9,7 +9,22 @@
 
 <body>
 
-    <h2>Listado de Usuarios</h2>
+    <h3>Gestion Usuarios</h3>
+    <form action="/add_usuario" method="post">
+        <input type="text" name="nombre" placeholder="Ingres Nombre">
+        <input type="text" name="email" placeholder="Ingrese email">
+        <button type="submit">Agregar Usuario</button>
+    </form>
+
+    <h3>Listado de Usuarios</h3>
+    <ul>
+        {% for item in usuarios %}
+        <li>{{item.id}}: {{item.nombre}} {{item.email}} {{item.materiales_prestados}} </li>
+        {% endfor %}
+    </ul>
+
+
+
 
 </body>
 
